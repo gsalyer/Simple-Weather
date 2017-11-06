@@ -50,6 +50,11 @@ public class GUI extends Program
         weatherField.setSize(300, 20);
         canvas.add(weatherField, 80, 100);
         weatherField.setEditable(false);
+
+        tempField = new JTextField();
+        tempField.setSize(280, 20);
+        canvas.add(tempField, 100, 140);
+        tempField.setEditable(false);
     }
 
     public static void main(String[] args)
