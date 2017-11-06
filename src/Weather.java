@@ -38,17 +38,17 @@ public class Weather
 
     public String getWeather()
     {
-        return json.getAsJsonObject().get("weather").getAsString();
+        return json.getAsJsonObject().get("current_observation").getAsJsonObject().get("weather").getAsString();
     }
 
     public String getTemperature()
     {
-        return json.getAsJsonObject().get("temperature_string").getAsString();
+        return json.getAsJsonObject().get("current_observation").getAsJsonObject().get("temperature_string").getAsString();
     }
 
     public String getCityState()
     {
-        return json.getAsJsonObject().get("display_location").getAsJsonObject().get("full").getAsString();
+        return json.getAsJsonObject().get("current_observation").getAsJsonObject().get("display_location").getAsJsonObject().get("full").getAsString();
     }
 
 
