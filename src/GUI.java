@@ -55,10 +55,34 @@ public class GUI extends Program
         tempField.setSize(280, 20);
         canvas.add(tempField, 100, 140);
         tempField.setEditable(false);
+
+        addActionListeners();
     }
 
     public static void main(String[] args)
     {
-        GUI g= new GUI();
+        GUI g = new GUI();
+    }
+
+    public void actionPerformed(ActionEvent ae)
+    {
+        String whichButton = ae.getActionCommand();
+
+        switch (whichButton)
+        {
+            case "Go":
+                Weather w = new Weather(inputField.getText());
+                locationField.setText(w.getCityState());
+                weatherField.setText(w.getWeather());
+                tempField.setText(w.getTemperature());
+                break;
+
+            case "Clear":
+                inputField.setText("");
+                locationField.setText("");
+                weatherField.setText("");
+                tempField.setText("");
+                break;
+        }
     }
 }
