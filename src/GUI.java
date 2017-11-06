@@ -45,6 +45,11 @@ public class GUI extends Program
         locationField.setSize(300, 20);
         canvas.add(locationField, 80, 60);
         locationField.setEditable(false);
+
+        weatherField = new JTextField();
+        weatherField.setSize(300, 20);
+        canvas.add(weatherField, 80, 100);
+        weatherField.setEditable(false);
     }
 
     public static void main(String[] args)
